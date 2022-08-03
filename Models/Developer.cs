@@ -1,7 +1,7 @@
 ﻿
 namespace EmployeesSalaries.Models
 {
-    public class Developer: Employee, ISubordinate<LeadDeveloper>
+    public class Developer: Employee, IManaged<LeadDeveloper>
     {
         public Developer(double basicSalary)
         {

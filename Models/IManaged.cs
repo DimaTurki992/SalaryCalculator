@@ -1,7 +1,7 @@
 ﻿
 namespace EmployeesSalaries.Models
 {
-    public interface ISubordinate<T>
+    public interface IManaged<T>
     {
         T Manager { get; set; }
     }

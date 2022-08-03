@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EmployeesSalaries.Models
 {
-    public class LeadDeveloper : Employee, ISubordinate<Manager>
+    public class LeadDeveloper : Employee, IManaged<Manager>
     {
         public LeadDeveloper(double basicSalary)
         {
