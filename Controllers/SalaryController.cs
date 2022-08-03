@@ -15,35 +15,35 @@ namespace SalaryCalculator.Controllers
         public double GetDeveloperSalary(double basicSalary)
         {
             Developer developer = new Developer(basicSalary);
-            return developer.FinalSalary;
+            return developer.GetTotalSalary();
         }
 
         [HttpGet("lead-developer")]
         public double GetLeadDeveloperSalary(double basicSalary)
         {
             LeadDeveloper leadDeveloper = new LeadDeveloper(basicSalary);
-            return leadDeveloper.FinalSalary;
+            return leadDeveloper.GetTotalSalary();
         }
 
         [HttpGet("HR-officer")]
         public double GetHRSalary(double basicSalary)
         {
             HROfficer hr = new HROfficer(basicSalary);
-            return hr.FinalSalary;
+            return hr.GetTotalSalary();
         }
 
         [HttpGet("manager")]
         public double GetManagerSalary(double basicSalary, double bonus)
         {
             Manager manager = new Manager(basicSalary, bonus);
-            return manager.FinalSalary;
+            return manager.GetTotalSalary();
         }
 
         [HttpGet("sales-employee")]
         public double GetSalesEmployeeSalary(double basicSalary, double salesAmount)
         {
             SalesEmployee manager = new SalesEmployee(basicSalary, salesAmount);
-            return manager.FinalSalary;
+            return manager.GetTotalSalary();
         }
     }
 }

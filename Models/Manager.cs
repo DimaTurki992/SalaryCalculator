@@ -13,9 +13,9 @@ namespace EmployeesSalaries.Models
             this.Bonus = bonus;
         }
         public double Bonus { get; set; }
-        public override double FinalSalary
+        public override double GetTotalSalary()
         {
-            get { return BasicSalary + Bonus; }
+            return BasicSalary + Bonus;
         }
 
     }

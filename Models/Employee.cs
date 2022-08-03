@@ -4,9 +4,9 @@ namespace EmployeesSalaries.Models
     public class Employee
     {
         public double BasicSalary { get; set; }
-        public virtual double FinalSalary
+        public virtual double GetTotalSalary()
         {
-            get { return BasicSalary; }
+            return BasicSalary;
         }
 
     }

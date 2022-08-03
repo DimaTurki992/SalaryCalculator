@@ -15,9 +15,9 @@ namespace EmployeesSalaries.Models
         public Manager Manager { get; set; }
         public double SalesAmount { get; set; }
 
-        public override double FinalSalary
+        public override double GetTotalSalary()
         {
-            get { return BasicSalary + Commission; }
+            return BasicSalary + Commission;
         }
 
         private double Commission
