@@ -42,8 +42,8 @@ namespace SalaryCalculator.Controllers
         [HttpGet("sales-employee")]
         public double GetSalesEmployeeSalary(double basicSalary, double salesAmount)
         {
-            SalesEmployee manager = new SalesEmployee(basicSalary, salesAmount);
-            return manager.GetTotalSalary();
+            SalesEmployee salesEmp = new SalesEmployee(basicSalary, salesAmount);
+            return salesEmp.GetTotalSalary();
         }
     }
 }
