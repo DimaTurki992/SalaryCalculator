@@ -6,12 +6,6 @@ namespace EmployeesSalaries.Models
         private const double Target = 1000;
         private const double CommissionPercentage = 0.15;
 
-        public SalesEmployee(double basicSalary, double salesAmount)
-        {
-            this.BasicSalary = basicSalary;
-            this.SalesAmount = salesAmount;
-        }
-
         public Manager Manager { get; set; }
         public double SalesAmount { get; set; }
 

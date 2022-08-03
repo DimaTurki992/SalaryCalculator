@@ -7,10 +7,6 @@ namespace EmployeesSalaries.Models
 {
     public class LeadDeveloper : Employee, IManaged<Manager>
     {
-        public LeadDeveloper(double basicSalary)
-        {
-            this.BasicSalary = basicSalary;
-        }
         public Manager Manager { get; set; }
         
     }
