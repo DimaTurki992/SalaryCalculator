@@ -17,19 +17,12 @@ namespace EmployeesSalaries.Models
 
         public override double GetTotalSalary()
         {
-            return BasicSalary + Commission;
+            return BasicSalary + GetCommission();
         }
 
-        private double Commission
+        public double GetCommission()
         {
-            get
-            {
-                if (SalesAmount >= Target)
-                {
-                    return SalesAmount * CommissionPercentage;
-                }
-                return 0;
-            }
+            return (SalesAmount >= Target) ? (SalesAmount * CommissionPercentage) : 0;
         }
 
     }
