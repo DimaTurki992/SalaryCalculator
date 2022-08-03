@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\SalaryCalculator.csproj": {}
+    "D:\\workspaces\\SalaryCalculator\\SalaryCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\SalaryCalculator.csproj": {
+    "D:\\workspaces\\SalaryCalculator\\SalaryCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\SalaryCalculator.csproj",
+        "projectUniqueName": "D:\\workspaces\\SalaryCalculator\\SalaryCalculator.csproj",
         "projectName": "SalaryCalculator",
-        "projectPath": "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\SalaryCalculator.csproj",
+        "projectPath": "D:\\workspaces\\SalaryCalculator\\SalaryCalculator.csproj",
         "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\obj\\",
+        "outputPath": "D:\\workspaces\\SalaryCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

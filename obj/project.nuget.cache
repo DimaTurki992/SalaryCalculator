@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9sk/KcF64qq5hoD+HN5k7qhL9dSb/XAsuVryn27NdG7j3Exqsv1CitrPjHVL7GlAcD3G2pSsw3fGhfvF7dmIQ==",
+  "dgSpecHash": "ciKn1/eXH3iFZOD9d9VoAApej0PbExzs5BfyPHjdMx45sUTmGHxhCwLvRoYsaDBl6LCy0wnMHVOLUmot3yKHFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dima\\Documents\\GitHub\\SalaryCalculator\\SalaryCalculator.csproj",
+  "projectFilePath": "D:\\workspaces\\SalaryCalculator\\SalaryCalculator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dima\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
