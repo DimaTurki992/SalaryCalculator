@@ -7,7 +7,11 @@ namespace EmployeesSalaries.Models
         private const double CommissionPercentage = 0.15;
 
         public Manager Manager { get; set; }
-        public double SalesAmount { get; set; }
+        public double SalesAmount { get; }
+        public SalesEmployee(int id, double basicSalary, double salesAmount) : base(id, basicSalary)
+        {
+            this.SalesAmount = salesAmount;
+        }
 
         public override double GetTotalSalary()
         {
