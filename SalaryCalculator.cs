@@ -1,5 +1,6 @@
 ﻿
-using EmployeesSalaries.Models;
+
+using SalaryCalculator.Models;
 
 namespace SalaryCalculator
 {

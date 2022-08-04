@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeesSalaries.Models
+namespace SalaryCalculator.Models
 {
     public class Employee
     {

@@ -1,5 +1,4 @@
-﻿using EmployeesSalaries.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SalaryCalculator.Models;
 using System.Linq;
 
@@ -16,7 +15,7 @@ namespace SalaryCalculator.Controllers
         [HttpGet]
         public double GetSalary(int employeeId)
         {
-            Employee employee = DataAccess.Data.Where(employee => employee.Id == employeeId).FirstOrDefault();
+            Employee employee = DataAccess.Employees.Where(employee => employee.Id == employeeId).FirstOrDefault();
             return employee.GetTotalSalary();
         }
 
