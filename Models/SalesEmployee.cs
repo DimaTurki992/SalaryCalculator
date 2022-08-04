@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeesSalaries.Models
+namespace SalaryCalculator.Models
 {
     public class SalesEmployee : Employee, IManaged<Manager>
     {
@@ -23,6 +23,10 @@ namespace EmployeesSalaries.Models
             return (SalesAmount >= Target) ? (SalesAmount * CommissionPercentage) : 0;
         }
 
+        public void SetManager(Manager manager)
+        {
+            this.Manager = manager;
+        }
     }
 
 }
