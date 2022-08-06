@@ -7,6 +7,8 @@ namespace SalaryCalculator.Models
         private const double CommissionPercentage = 0.15;
 
         public Manager Manager { get; set; }
+        object IManaged.Manager { get; set; }
+
         public double SalesAmount { get; }
         public SalesEmployee(int id, double basicSalary, double salesAmount) : base(id, basicSalary)
         {
@@ -21,11 +23,6 @@ namespace SalaryCalculator.Models
         public double GetCommission()
         {
             return (SalesAmount >= Target) ? (SalesAmount * CommissionPercentage) : 0;
-        }
-
-        public void SetManager(Manager manager)
-        {
-            this.Manager = manager;
         }
     }
 

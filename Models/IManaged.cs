@@ -1,9 +1,13 @@
 ﻿
 namespace SalaryCalculator.Models
 {
-    public interface IManaged<T>
+    public interface IManaged<T> : IManaged
     {
-        T Manager { get; set; }
-        void SetManager(T manager);
+        new T Manager { get; set; }
+    }
+
+    public interface IManaged
+    {
+        object Manager { get; set; }
     }
 }
