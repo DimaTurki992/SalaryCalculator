@@ -1,35 +1,26 @@
 ﻿
 namespace EmployeesSalaries.Models
 {
-    public class SalesEmployee : Employee, ISubordinate<Manager>
+    public class SalesEmployee : Employee, IManaged<Manager>
     {
         private const double Target = 1000;
         private const double CommissionPercentage = 0.15;
 
-        public SalesEmployee(double basicSalary, double salesAmount)
+        public Manager Manager { get; set; }
+        public double SalesAmount { get; }
+        public SalesEmployee(int id, double basicSalary, double salesAmount) : base(id, basicSalary)
         {
-            this.BasicSalary = basicSalary;
             this.SalesAmount = salesAmount;
         }
 
-        public Manager Manager { get; set; }
-        public double SalesAmount { get; set; }
-
-        public override double FinalSalary
+        public override double GetTotalSalary()
         {
-            get { return BasicSalary + Commission; }
+            return BasicSalary + GetCommission();
         }
 
-        private double Commission
+        public double GetCommission()
         {
-            get
-            {
-                if (SalesAmount >= Target)
-                {
-                    return SalesAmount * CommissionPercentage;
-                }
-                return 0;
-            }
+            return (SalesAmount >= Target) ? (SalesAmount * CommissionPercentage) : 0;
         }
 
     }

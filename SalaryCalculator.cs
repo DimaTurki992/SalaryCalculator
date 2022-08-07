@@ -10,7 +10,7 @@ namespace SalaryCalculator
             double total = 0;
             foreach (var emp in employees)
             {
-                total += emp.FinalSalary;
+                total += emp.GetTotalSalary();
             }
             return total;
         }

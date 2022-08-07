@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿
 namespace EmployeesSalaries.Models
 {
     public class Manager : Employee
     {
-        public Manager(double basicSalary, double bonus)
+        public double Bonus { get; }
+        public Manager(int id, double basicSalary, double bonus) : base(id, basicSalary)
         {
-            this.BasicSalary = basicSalary;
             this.Bonus = bonus;
         }
-        public double Bonus { get; set; }
-        public override double FinalSalary
+
+        public override double GetTotalSalary()
         {
-            get { return BasicSalary + Bonus; }
+            return BasicSalary + Bonus;
         }
 
     }

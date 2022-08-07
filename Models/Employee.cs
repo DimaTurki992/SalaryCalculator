@@ -3,10 +3,16 @@ namespace EmployeesSalaries.Models
 {
     public class Employee
     {
-        public double BasicSalary { get; set; }
-        public virtual double FinalSalary
+        public int Id { get; }
+        public double BasicSalary { get; }
+        public Employee(int id, double basicSalary)
         {
-            get { return BasicSalary; }
+            this.Id = id;
+            this.BasicSalary = basicSalary;
+        }
+        public virtual double GetTotalSalary()
+        {
+            return BasicSalary;
         }
 
     }

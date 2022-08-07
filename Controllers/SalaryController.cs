@@ -1,5 +1,7 @@
 ﻿using EmployeesSalaries.Models;
 using Microsoft.AspNetCore.Mvc;
+using SalaryCalculator.Models;
+using System.Linq;
 
 namespace SalaryCalculator.Controllers
 {
@@ -11,39 +13,12 @@ namespace SalaryCalculator.Controllers
         {
         }
 
-        [HttpGet("developer")]
-        public double GetDeveloperSalary(double basicSalary)
+        [HttpGet]
+        public double GetSalary(int employeeId)
         {
-            Developer developer = new Developer(basicSalary);
-            return developer.FinalSalary;
+            Employee employee = DataAccess.Data.Where(employee => employee.Id == employeeId).FirstOrDefault();
+            return employee.GetTotalSalary();
         }
 
-        [HttpGet("lead-developer")]
-        public double GetLeadDeveloperSalary(double basicSalary)
-        {
-            LeadDeveloper leadDeveloper = new LeadDeveloper(basicSalary);
-            return leadDeveloper.FinalSalary;
-        }
-
-        [HttpGet("HR-officer")]
-        public double GetHRSalary(double basicSalary)
-        {
-            HROfficer hr = new HROfficer(basicSalary);
-            return hr.FinalSalary;
-        }
-
-        [HttpGet("manager")]
-        public double GetManagerSalary(double basicSalary, double bonus)
-        {
-            Manager manager = new Manager(basicSalary, bonus);
-            return manager.FinalSalary;
-        }
-
-        [HttpGet("sales-employee")]
-        public double GetSalesEmployeeSalary(double basicSalary, double salesAmount)
-        {
-            SalesEmployee manager = new SalesEmployee(basicSalary, salesAmount);
-            return manager.FinalSalary;
-        }
     }
 }
