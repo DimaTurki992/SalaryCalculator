@@ -13,7 +13,7 @@ namespace SalaryCalculator.Controllers
         }
 
         [HttpGet]
-        public double GetSalary(int employeeId)
+        public decimal GetSalary(int employeeId)
         {
             Employee employee = DataAccess.Employees.Where(employee => employee.Id == employeeId).FirstOrDefault();
             return employee.GetTotalSalary();

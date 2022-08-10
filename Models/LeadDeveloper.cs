@@ -6,6 +6,6 @@ namespace SalaryCalculator.Models
         public Manager Manager { get; set; }
         object IManaged.Manager { get; set; }
 
-        public LeadDeveloper(int id, double basicSalary): base (id, basicSalary) { }
+        public LeadDeveloper(int id, decimal basicSalary): base (id, basicSalary) { }
     }
 }

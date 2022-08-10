@@ -5,7 +5,7 @@ namespace SalaryCalculator.Models
     {
         public Manager Manager { get; set; }
         object IManaged.Manager { get; set; }
-        public HROfficer(int id, double basicSalary): base (id, basicSalary) { }
+        public HROfficer(int id, decimal basicSalary): base (id, basicSalary) { }
 
     }
 }

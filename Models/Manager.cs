@@ -3,13 +3,13 @@ namespace SalaryCalculator.Models
 {
     public class Manager : Employee
     {
-        public double Bonus { get; }
-        public Manager(int id, double basicSalary, double bonus) : base(id, basicSalary)
+        public decimal Bonus { get; }
+        public Manager(int id, decimal basicSalary, decimal bonus) : base(id, basicSalary)
         {
             this.Bonus = bonus;
         }
 
-        public override double GetTotalSalary()
+        public override decimal GetTotalSalary()
         {
             return BasicSalary + Bonus;
         }

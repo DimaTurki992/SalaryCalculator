@@ -3,26 +3,26 @@ namespace SalaryCalculator.Models
 {
     public class SalesEmployee : Employee, IManaged<Manager>
     {
-        private const double Target = 1000;
+        private const decimal Target = 1000;
         private const double CommissionPercentage = 0.15;
 
         public Manager Manager { get; set; }
         object IManaged.Manager { get; set; }
 
-        public double SalesAmount { get; }
-        public SalesEmployee(int id, double basicSalary, double salesAmount) : base(id, basicSalary)
+        public decimal SalesAmount { get; }
+        public SalesEmployee(int id, decimal basicSalary, decimal salesAmount) : base(id, basicSalary)
         {
             this.SalesAmount = salesAmount;
         }
 
-        public override double GetTotalSalary()
+        public override decimal GetTotalSalary()
         {
             return BasicSalary + GetCommission();
         }
 
-        public double GetCommission()
+        public decimal GetCommission()
         {
-            return (SalesAmount >= Target) ? (SalesAmount * CommissionPercentage) : 0;
+            return (SalesAmount >= Target) ? (SalesAmount * (decimal)CommissionPercentage) : 0;
         }
     }
 
